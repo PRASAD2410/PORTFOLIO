@@ -1,0 +1,38 @@
+.terminal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-container {
+  border: 2px solid #1a2847;
+  padding: 2rem;
+  background-color: rgba(10, 14, 39, 0.9);
+  box-shadow: 0 0 20px rgba(255, 149, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 149, 0, 0.5);
+  border-bottom: 1px solid #1a2847;
+  padding-bottom: 1rem;
+}
+
+.command-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-left: 2px solid #ff9500;
+  padding-left: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+}

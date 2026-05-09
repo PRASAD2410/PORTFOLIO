@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0e27;
+  color: #ff9500;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Terminal text effect */
+.terminal-text {
+  text-shadow: 0 0 10px rgba(255, 149, 0, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.terminal-header {
+  border: 2px solid #1a2847;
+  padding: 1rem;
+  background-color: #0f1535;
+  box-shadow: 0 0 20px rgba(255, 149, 0, 0.2);
+}
+
+.terminal-border {
+  border: 1px solid #1a2847;
+  padding: 2rem;
+  background-color: rgba(10, 14, 39, 0.8);
+}
+
+.command-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.command-prompt {
+  color: #ff9500;
+  font-weight: bold;
+}
+
+.terminal-link {
+  color: #ff9500;
+  text-decoration: none;
+  border-bottom: 1px dotted #ff9500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.terminal-link:hover {
+  color: #ff7700;
+  text-shadow: 0 0 10px rgba(255, 119, 0, 0.8);
+  border-bottom-color: #ff7700;
+}
+
+/* ASCII Art styling */
+.ascii-art {
+  white-space: pre;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: #ff9500;
+}
+
+/* Loading animation */
+@keyframes blink {
+  0%, 49%, 100% {
+    opacity: 1;
+  }
+  50%, 99% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1.2em;
+  background-color: #ff9500;
+  animation: blink 1s infinite;
+  margin-left: 0.2rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2847;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9500;
+}
+
+/* Grid background pattern */
+.terminal-bg {
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(255, 149, 0, 0.05) 25%, rgba(255, 149, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 149, 0, 0.05) 75%, rgba(255, 149, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 149, 0, 0.05) 25%, rgba(255, 149, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 149, 0, 0.05) 75%, rgba(255, 149, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+}
