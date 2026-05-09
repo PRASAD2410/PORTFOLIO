@@ -2,18 +2,10 @@
   "version": 2,
   "experimentalServices": {
     "frontend": {
-      "entrypoint": "frontend/package.json",
-      "config": {
-        "zeroConfig": true
-      }
+      "entrypoint": "frontend/package.json"
     },
     "backend": {
-      "entrypoint": "backend/src/server.js",
-      "config": {
-        "runtime": "nodejs18.x",
-        "memory": 1024,
-        "maxDuration": 60
-      }
+      "entrypoint": "backend/src/server.js"
     }
   }
 }
