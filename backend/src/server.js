@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path');
 require('dotenv').config();
 
 // Initialize Express app
@@ -19,16 +20,11 @@ app.use(morgan('combined')); // Request logging
 app.use(bodyParser.json()); // Parse JSON requests
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded requests
 
-// Routes
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Portfolio API Server Running',
-    version: '1.0.0',
-    timestamp: new Date().toISOString()
-  });
-});
+// Serve frontend static files
+const frontendPath = path.join(__dirname, '../../frontend/dist');
+app.use(express.static(frontendPath));
 
-// API Routes
+// API Routes (must be before fallback)
 app.use('/api/home', require('../routes/home'));
 app.use('/api/about', require('../routes/about'));
 app.use('/api/skills', require('../routes/skills'));
@@ -38,9 +34,13 @@ app.use('/api/internship', require('../routes/internship'));
 app.use('/api/achievements', require('../routes/achievements'));
 app.use('/api/contact', require('../routes/contact'));
 
-// 404 Handler
-app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
+// Fallback to React Router - must be after all API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'), (err) => {
+    if (err) {
+      res.status(404).json({ error: 'Page not found' });
+    }
+  });
 });
 
 // Error Handler
