@@ -144,10 +144,9 @@ export default function Contact() {
           <span>cat contact_info.txt</span>
         </div>
         <div className="ml-4 mt-3 text-sm">
-          <p>Email: your-email@example.com</p>
-          <p>LinkedIn: linkedin.com/in/yourprofile</p>
-          <p>GitHub: github.com/yourprofile</p>
-          <p>Twitter: @yourhandle</p>
+          <p>Email: prasad.arde_comp23@pccoer.in</p>
+          <p>GitHub: https://github.com/PRASAD2410</p>
+          <p>LinkedIn: https://www.linkedin.com/in/prasad-arde-421753292</p>
         </div>
       </motion.div>
     </motion.div>
