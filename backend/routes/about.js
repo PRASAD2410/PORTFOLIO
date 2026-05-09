@@ -11,8 +11,7 @@ router.get('/', (req, res) => {
       image: '/images/profile.jpg',
       socialLinks: {
         github: 'https://github.com/PRASAD2410',
-        linkedin: 'https://linkedin.com/in/prasad-arde',
-        twitter: 'https://twitter.com',
+        linkedin: 'https://www.linkedin.com/in/prasad-arde-421753292',
         email: 'prasad.arde_comp23@pccoer.in'
       }
     };

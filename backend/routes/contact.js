@@ -48,9 +48,8 @@ router.get('/', (req, res) => {
     const contactInfo = {
       email: 'prasad.arde_comp23@pccoer.in',
       github: 'https://github.com/PRASAD2410',
-      linkedin: 'https://linkedin.com/in/prasad-arde',
-      twitter: 'https://twitter.com',
-      phone: '+91-XXXXXXXXXX'
+      linkedin: 'https://www.linkedin.com/in/prasad-arde-421753292',
+      phone: 'Available on request'
     };
     res.json(contactInfo);
   } catch (error) {
